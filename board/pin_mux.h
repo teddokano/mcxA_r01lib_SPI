@@ -27,12 +27,12 @@ void BOARD_InitBootPins(void);
 
 #define PCR_IBE_ibe1 0x01u          /*!<@brief Input Buffer Enable: Enables */
 #define PORT2_PCR0_MUX_mux00 0x00u  /*!<@brief Pin Multiplex Control: Alternative 0 (GPIO) */
-#define PORT2_PCR12_MUX_mux10 0x02u /*!<@brief Pin Multiplex Control: Alternative 2 (chip-specific) */
-#define PORT2_PCR13_MUX_mux10 0x02u /*!<@brief Pin Multiplex Control: Alternative 2 (chip-specific) */
-#define PORT2_PCR16_MUX_mux10 0x02u /*!<@brief Pin Multiplex Control: Alternative 2 (chip-specific) */
+#define PORT2_PCR12_MUX_mux00 0x00u /*!<@brief Pin Multiplex Control: Alternative 0 (GPIO) */
+#define PORT2_PCR13_MUX_mux00 0x00u /*!<@brief Pin Multiplex Control: Alternative 0 (GPIO) */
+#define PORT2_PCR16_MUX_mux00 0x00u /*!<@brief Pin Multiplex Control: Alternative 0 (GPIO) */
 #define PORT2_PCR4_MUX_mux00 0x00u  /*!<@brief Pin Multiplex Control: Alternative 0 (GPIO) */
 #define PORT2_PCR5_MUX_mux00 0x00u  /*!<@brief Pin Multiplex Control: Alternative 0 (GPIO) */
-#define PORT2_PCR6_MUX_mux10 0x02u  /*!<@brief Pin Multiplex Control: Alternative 2 (chip-specific) */
+#define PORT2_PCR6_MUX_mux00 0x00u  /*!<@brief Pin Multiplex Control: Alternative 0 (GPIO) */
 #define PORT3_PCR27_MUX_mux10 0x02u /*!<@brief Pin Multiplex Control: Alternative 2 (chip-specific) */
 #define PORT3_PCR28_MUX_mux10 0x02u /*!<@brief Pin Multiplex Control: Alternative 2 (chip-specific) */
 #define PORT3_PCR29_MUX_mux00 0x00u /*!<@brief Pin Multiplex Control: Alternative 0 (GPIO) */
@@ -323,23 +323,24 @@ void BOARD_InitBootPins(void);
 /*! @name PORT2_6 (number 20), ARD_D10
   @{ */
 
+/* Symbols to be used with GPIO driver */
+#define BOARD_INITPINS_ARD_D10_GPIO GPIO2               /*!<@brief GPIO peripheral base pointer */
+#define BOARD_INITPINS_ARD_D10_GPIO_PIN 6U              /*!<@brief GPIO pin number */
+#define BOARD_INITPINS_ARD_D10_GPIO_PIN_MASK (1U << 6U) /*!<@brief GPIO pin mask */
+
 /* Symbols to be used with PORT driver */
 #define BOARD_INITPINS_ARD_D10_PORT PORT2               /*!<@brief PORT peripheral base pointer */
 #define BOARD_INITPINS_ARD_D10_PIN 6U                   /*!<@brief PORT pin number */
 #define BOARD_INITPINS_ARD_D10_PIN_MASK (1U << 6U)      /*!<@brief PORT pin mask */
                                                         /* @} */
 
-/*! @name PORT2_12 (number 22), ARD_D13
-  @{ */
-
-/* Symbols to be used with PORT driver */
-#define BOARD_INITPINS_ARD_D13_PORT PORT2                /*!<@brief PORT peripheral base pointer */
-#define BOARD_INITPINS_ARD_D13_PIN 12U                   /*!<@brief PORT pin number */
-#define BOARD_INITPINS_ARD_D13_PIN_MASK (1U << 12U)      /*!<@brief PORT pin mask */
-                                                         /* @} */
-
 /*! @name PORT2_13 (number 23), ARD_D11
   @{ */
+
+/* Symbols to be used with GPIO driver */
+#define BOARD_INITPINS_ARD_D11_GPIO GPIO2                /*!<@brief GPIO peripheral base pointer */
+#define BOARD_INITPINS_ARD_D11_GPIO_PIN 13U              /*!<@brief GPIO pin number */
+#define BOARD_INITPINS_ARD_D11_GPIO_PIN_MASK (1U << 13U) /*!<@brief GPIO pin mask */
 
 /* Symbols to be used with PORT driver */
 #define BOARD_INITPINS_ARD_D11_PORT PORT2                /*!<@brief PORT peripheral base pointer */
@@ -350,10 +351,29 @@ void BOARD_InitBootPins(void);
 /*! @name PORT2_16 (number 24), ARD_D12
   @{ */
 
+/* Symbols to be used with GPIO driver */
+#define BOARD_INITPINS_ARD_D12_GPIO GPIO2                /*!<@brief GPIO peripheral base pointer */
+#define BOARD_INITPINS_ARD_D12_GPIO_PIN 16U              /*!<@brief GPIO pin number */
+#define BOARD_INITPINS_ARD_D12_GPIO_PIN_MASK (1U << 16U) /*!<@brief GPIO pin mask */
+
 /* Symbols to be used with PORT driver */
 #define BOARD_INITPINS_ARD_D12_PORT PORT2                /*!<@brief PORT peripheral base pointer */
 #define BOARD_INITPINS_ARD_D12_PIN 16U                   /*!<@brief PORT pin number */
 #define BOARD_INITPINS_ARD_D12_PIN_MASK (1U << 16U)      /*!<@brief PORT pin mask */
+                                                         /* @} */
+
+/*! @name PORT2_12 (number 22), ARD_D13
+  @{ */
+
+/* Symbols to be used with GPIO driver */
+#define BOARD_INITPINS_ARD_D13_GPIO GPIO2                /*!<@brief GPIO peripheral base pointer */
+#define BOARD_INITPINS_ARD_D13_GPIO_PIN 12U              /*!<@brief GPIO pin number */
+#define BOARD_INITPINS_ARD_D13_GPIO_PIN_MASK (1U << 12U) /*!<@brief GPIO pin mask */
+
+/* Symbols to be used with PORT driver */
+#define BOARD_INITPINS_ARD_D13_PORT PORT2                /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITPINS_ARD_D13_PIN 12U                   /*!<@brief PORT pin number */
+#define BOARD_INITPINS_ARD_D13_PIN_MASK (1U << 12U)      /*!<@brief PORT pin mask */
                                                          /* @} */
 
 /*!
