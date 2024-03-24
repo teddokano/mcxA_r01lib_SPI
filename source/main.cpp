@@ -6,7 +6,6 @@
  */
 
 #include	"r01lib.h"
-r01lib_start;	/* *** place this word before making instance of r01lib classes *** */
 
 SPI			spi( D11, D12, D13, D10 );	//	MOSI, MISO, SCLK, CS
 
